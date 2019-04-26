@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>daysofmonth</title>
+</head>
+<body>
+<input type="text" id="thang" style="background-color:wheat">
+&emsp;
+<input type="button" style="background-color:orange" value="Tính số ngày" onclick="tim();">
+<br><br><br>
+<font style="color: blue"><p id="kq"></p></font>
+<script>
+    function tim() {
+        let a = parseInt(document.getElementById("thang").value);
+        switch (a) {
+            case 1 :
+            case 3 :
+            case 5 :
+            case 7 :
+            case 8 :
+            case 10 :
+            case 12 :
+                let kq1 = ("Tháng " + a + " có 31 ngày");
+                document.getElementById('kq').innerHTML = kq1;
+                break;
+            case 4 :
+            case 6 :
+            case 9 :
+            case 11 :
+                let kq2 = ("Tháng "  + a + " có 30 ngày");
+                document.getElementById('kq').innerHTML = kq2;
+                break;
+            case 2 :
+                let kq3 = ("Tháng "  + a + " có 28 hoặc 29 ngày");
+                document.getElementById('kq').innerHTML = kq3;
+        }
+    }
+</script>
+</body>
+</html>
